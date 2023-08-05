@@ -1,0 +1,56 @@
+#The following line is the host
+@host=api.api-ninjas.com/v1
+@api-key=<YOUR API KEY>
+
+### OPERATION: GET dadjokes
+GET {{host}}/dadjokes
+?limit=1
+X-Api-Key: {{api-key}}
+
+### OPERATION: GET cars
+GET {{host}}/cars
+?limit=5
+&make=audi
+&model=q3
+X-Api-Key: {{api-key}}
+
+### OPERATION: GET cities
+GET {{host}}/city
+?min_lat=46.00
+&max_lat=47.00
+&limit=30
+X-Api-Key: {{api-key}}
+
+### OPERATION: GET exchangerate
+GET {{host}}/exchangerate
+?pair=USD_MXN
+X-Api-Key: {{api-key}}
+
+###OPERATION: GET convertcurrency
+GET {{host}}/convertcurrency
+?have=USD
+&want=MXN
+&amount=5000
+X-Api-Key: {{api-key}}
+
+###OPERATION: GET emoji
+GET {{host}}/emoji
+?name=slightly smiling face
+X-Api-Key: {{api-key}}
+
+###OPERATION: POST object detection
+POST {{host}}/objectdetection
+Content-Type: multipart/form-data;boundary=MiImagen
+X-Api-Key: {{api-key}}
+
+--MiImagen
+Content-Disposition: form-data; name="image"; filename="hack.jpg"
+Content-Type: image/jpeg
+
+< images/hack.jpg
+--MiImagen--
+
+###OPERATION: GET qr code generator
+GET {{host}}/randomimage?
+?category=cars
+X-Api-Key: {{api-key}}
