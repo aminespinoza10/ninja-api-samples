@@ -1,4 +1,4 @@
-#The following line is the host
+#The following lines are the host and api-key for every request
 @host=api.api-ninjas.com/v1
 @api-key=<YOUR API KEY>
 
@@ -49,8 +49,3 @@ Content-Type: image/jpeg
 
 < images/hack.jpg
 --MiImagen--
-
-###OPERATION: GET qr code generator
-GET {{host}}/randomimage?
-?category=cars
-X-Api-Key: {{api-key}}
